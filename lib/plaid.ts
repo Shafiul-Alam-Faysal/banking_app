@@ -1,4 +1,3 @@
-import { headers } from "next/headers";
 import { Configuration, PlaidApi, PlaidEnvironments } from "plaid";
 
 const configuration = new Configuration({
@@ -6,7 +5,7 @@ const configuration = new Configuration({
 	baseOptions: {
 		headers: {
 			"PLAID-CLIENT-ID": process.env.PLAID_CLIENT_ID,
-			PLAID_SECRET: process.env.PLAID_SECRET,
+			"PLAID-SECRET": process.env.PLAID_SECRET,
 		},
 	},
 });
